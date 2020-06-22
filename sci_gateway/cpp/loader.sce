@@ -11,6 +11,7 @@ if bOK then
 end
 //
 list_functions = [ 'kruskal_wallis';
+                   'poisson_test';
 ];
 addinter(libtest_toolbox_path + filesep() + 'libtest_toolbox' + getdynlibext(), 'libtest_toolbox', list_functions);
 // remove temp. variables on stack

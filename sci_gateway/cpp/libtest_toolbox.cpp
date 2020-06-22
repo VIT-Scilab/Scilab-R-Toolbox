@@ -11,6 +11,7 @@ extern "C"
 int libtest_toolbox(wchar_t* _pwstFuncName)
 {
     if(wcscmp(_pwstFuncName, L"kruskal_wallis") == 0){ addCFunction(L"kruskal_wallis", &sci_kruskal_wallis, MODULE_NAME); }
+    if(wcscmp(_pwstFuncName, L"poisson_test") == 0){ addCFunction(L"poisson_test", &sci_ppois, MODULE_NAME); }
 
     return 1;
 }

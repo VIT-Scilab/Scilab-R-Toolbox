@@ -3,6 +3,6 @@
 
 #include "c_gateway_prototype.h"
 
-C_GATEWAY_PROTOTYPE(sci_kruskal_wallis);
+C_GATEWAY_PROTOTYPE(sci_kruskal_wallis,sci_ppois);
 
 #endif /* __TEST_TOOLBOX_GW_H__ */

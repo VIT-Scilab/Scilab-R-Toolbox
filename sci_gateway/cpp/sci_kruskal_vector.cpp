@@ -40,29 +40,30 @@ knowledge of the CeCILL license and that you accept its terms.
 ********************************/
 
 
+
 extern "C"
 {
 #include<Scierror.h>
 #include<api_scilab.h>
 #include <stdio.h>
 #include "localization.h"
-#include "r_kruskal1.h"
+#include "r_kruskalc.h"
 
 
 
 
-static const char fname[] = "kruskal_wallis";
-int sci_kruskal_wallis(scilabEnv env, int nin, scilabVar* in, int nopt, scilabOpt* opt, int nout, scilabVar* out)
+static const char fname[] = "kruskal_wallis_vector";
+int sci_kruskal_vector(scilabEnv env, int nin, scilabVar* in, int nopt, scilabOpt* opt, int nout, scilabVar* out)
 
-{
-	//wchar_t** in1 = NULL;
-	//double* in2 = NULL;
+{	double *in1;
+	double *in2;
+	double *in3;
 	wchar_t** out1;
-	//double ar[1];
+	
   
-if (nin != 0)
+if (nin != 3)
     {
-        Scierror(77, _("%s: Wrong number of input argument(s): %d expected.\n"), fname, 0);
+        Scierror(77, _("%s: Wrong number of input argument(s): %d expected.\n"), fname, 3);
         return 1;
     }
 
@@ -72,9 +73,16 @@ if (nout != 1)
         return 1;
     }
     
+    scilab_getDoubleArray(env, in[0],&in1);
+    //Scierror(77,_("Hi"));
+    //in[0] = scilab_createDoubleMatrix2d(env, 1, 4);
+    scilab_getDoubleArray(env,  in[1],&in2);
+    scilab_getDoubleArray(env,  in[2],&in3);
+    
+    
     char *ans[5];
     
-    int ret1 = r_kruskal1(ans);
+    int ret1 = r_kruskalc(in1[0],in2,in3,ans);
     
     
     const size_t cSize0 = strlen(ans[0])+1;

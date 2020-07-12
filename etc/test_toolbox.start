@@ -1,17 +1,25 @@
-// Copyright (C) 2008 - INRIA
-// Copyright (C) 2009 - DIGITEO
 
-// This file is released under the 3-clause BSD license. See COPYING-BSD.
+// This file is licensed under CeCILL
+// This file is licensed under CeCILL
+//Authors :
+//Venkat Ragavan S (mail2venkat21@gmail.com)
+//Garima Dave (garimadave628@gmail.com)
+//Akash Manish Lad (akashlad4000@gmail.com)
+//Tarun A H (tarun.ambili123@gmail.com)
+//Mohana N (Assistant Professor, SAS, Divison of Mathematics, Vit Chennai) (mohana.n@vit.ac.in)
+
+
+
 
 function test_toolboxlib = startModule()
 
-    TOOLBOX_NAME  = "test_toolbox";
-    TOOLBOX_TITLE = "test_toolbox";
+    TOOLBOX_NAME  = "Scilab-R-Toolbox";
+    TOOLBOX_TITLE = "Scilab-R-Toolbox";
 
   mprintf("Start " + TOOLBOX_TITLE + "\n");
 
   if isdef("test_toolboxlib") then
-    warning("scilab_toolbox library is already loaded");
+    warning("scilab_r_toolbox library is already loaded");
     return;
   end
 

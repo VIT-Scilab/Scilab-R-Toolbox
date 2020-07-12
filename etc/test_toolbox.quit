@@ -1,6 +1,14 @@
-// This file is released under the 3-clause BSD license. See COPYING-BSD.
+// This file is licensed under CeCILL
+/*
+Authors :
+Venkat Ragavan S (mail2venkat21@gmail.com)
+Garima Dave (garimadave628@gmail.com)
+Akash Manish Lad (akashlad4000@gmail.com)
+Tarun A H (tarun.ambili123@gmail.com)
+Mohana N (Assistant Professor, SAS, Divison of Mathematics, Vit Chennai) (mohana.n@vit.ac.in)
 
-// Some specific hooks can be specify here when the module is unloaded.
+*/
+
 
 function quitModule()
 
